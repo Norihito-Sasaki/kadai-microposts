@@ -39,7 +39,7 @@ class UsersController < ApplicationController
     counts(@user)
   end
   
-  def fav_posts
+  def likes
     @user = User.find(params[:id])
     @favorites = @user.fav_posts.order(id: :desc).page(params[:page])
     counts(@user)
